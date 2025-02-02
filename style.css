@@ -123,7 +123,7 @@ body {
 @keyframes aparecer {
     from {
         opacity: 0;
-        transform: scale(.7) translateY(10px);
+        transform: scale(.95) translateY(10px);
     }
     to {
         opacity: 1;
@@ -146,6 +146,9 @@ body {
     text-align: center;
     font-size: 2.3rem;
     text-decoration: underline;
+    animation: aparecerscroll-reverse both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 80%;
 }
 
 .about__section__paragraph__container {
@@ -162,11 +165,22 @@ body {
 
 @keyframes aparecerscroll {
     from {
-        transform: translateY(5dvh);
+        transform: translateY(8dvh);
         opacity: 0;
     }
     to {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerscroll-reverse {
+    from {
+        transform: translateY(-8dvh) scale(.9);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
 }
@@ -216,6 +230,9 @@ body {
     box-shadow: 0 0 15px rgb(87, 87, 87);
     justify-self: center;
     align-self: center;
+    animation: aparecerscroll both;
+    animation-timeline: view();
+    animation-range: entry 45% cover 55%;
 }
 
 .maps {
@@ -235,6 +252,9 @@ body {
     justify-content: center;
     height: 10dvh;
     margin-bottom: .7rem;
+    animation: aparecerscroll both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
 }
 
 .ubication__section__title {
@@ -270,6 +290,9 @@ body {
     display: flex;
     justify-content: center;
     height: 10dvh;
+    animation: aparecerscroll both;
+    animation-timeline: view();
+    animation-range: entry 45% cover 55%;
 }
 
 .contact__section__title{
@@ -297,6 +320,9 @@ body {
     box-shadow: 0 0 15px rgb(87, 87, 87);
     justify-self: center;
     align-self: center;
+    animation: aparecerscroll both;
+    animation-timeline: view();
+    animation-range: entry 45% cover 55%;
 }
 
 .contact__info {
@@ -345,6 +371,9 @@ body {
     display: flex;
     justify-content: center;
     height: 10dvh;
+    animation: aparecerscroll both;
+    animation-timeline: view();
+    animation-range: entry 45% cover 55%;
 }
 
 .time__section__title {
@@ -373,6 +402,9 @@ body {
     box-shadow: 0 0 15px rgb(87, 87, 87);
     justify-self: center;
     align-self: center;
+    animation: aparecerscroll both;
+    animation-timeline: view();
+    animation-range: entry 45% cover 55%;
 }
 
 .time__random__container {
@@ -403,4 +435,15 @@ tr :last-child {
 
 .closed {
     text-decoration: underline 1px white;
+}
+
+
+
+/* ----- FOOTER SECTION ----- */
+
+footer {
+    width: 100%;
+    padding: .8rem;
+    margin-top: auto;
+    background-color:#a8d5ba;
 }
