@@ -9,8 +9,11 @@ div, body, head, ul, li, a, span, label, h1, h2, h3, h4, h5, p {
 
 body {
     font-family: 'Montserrat';
-    scroll-behavior: smooth;
     width: 100%;
+}
+
+html, body {
+    scroll-behavior: smooth;
 }
 
 
@@ -31,7 +34,7 @@ body {
 }
 
 .header__logo {
-    width: 10rem;
+    width: 6rem;
     animation: aparecer 1s both ease;
 }
 
@@ -62,7 +65,7 @@ body {
 
 .header__gradient {
     width: 100%;
-    height: 70dvh;
+    height: 80dvh;
     background-image: linear-gradient(#000000ce 60%,#00000000);
     position: absolute;
     z-index: 20;
@@ -218,6 +221,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .ubication__section__container {
@@ -277,6 +281,44 @@ body {
     flex-direction: column;
 }
 
+.farmacia-logo {
+    width: 5rem;
+    position: absolute;
+    top: 2rem;
+    right: .3rem;
+    animation: aparecerscroll-logo2 both;
+    animation-timeline: view();
+    animation-range: entry 80% cover 100%;
+}
+
+.fl2 {
+    left: .3rem;
+    animation: aparecerscroll-logo1 both;
+    animation-timeline: view();
+    animation-range: entry 80% cover 100%;
+}
+
+@keyframes aparecerscroll-logo2 {
+    from {
+        transform: translateY(8dvh) rotate(15deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) rotate(15deg);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerscroll-logo1 {
+    from {
+        transform: translateY(8dvh) rotate(-15deg) rotateY(180deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) rotate(-15deg) rotateY(180deg);
+        opacity: 1;
+    }
+}
 
 
 /* ----- CONTACT SECTION ----- */
@@ -284,6 +326,7 @@ body {
 .contact__section {
     height: 90dvh;
     width: 100%;
+    position: relative;
 }
 
 .contact__section__title__container {
@@ -358,6 +401,44 @@ body {
     margin-left: 2rem;
 }
 
+.trato-imagen {
+    width: 5rem;
+    position: absolute;
+    top: 1.15rem;
+    right: .3rem;
+    animation: aparecerscroll-logo-trato2 both;
+    animation-timeline: view();
+    animation-range: entry 80% cover 100%;
+}
+
+.ti2 {
+    left: .3rem;
+    animation: aparecerscroll-logo-trato1 both;
+    animation-timeline: view();
+    animation-range: entry 80% cover 100%;
+}
+
+@keyframes aparecerscroll-logo-trato2 {
+    from {
+        transform: translateY(8dvh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerscroll-logo-trato1 {
+    from {
+        transform: translateY(8dvh) rotateY(180deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) rotateY(180deg);
+        opacity: 1;
+    }
+}
 
 
 /* ----- TIME SECTION ----- */
@@ -365,6 +446,7 @@ body {
 .time__section {
     height: 90dvh;
     width: 100%;
+    position: relative;
 }
 
 .time__section__title__container {
@@ -437,6 +519,23 @@ tr :last-child {
     text-decoration: underline 1px white;
 }
 
+.clock-image {
+    width: 4rem;
+    position: absolute;
+    top: 1.15rem;
+    right: .5rem;
+    animation: aparecerscroll-logo2 both;
+    animation-timeline: view();
+    animation-range: entry 80% cover 100%;
+}
+
+.ci2 {
+    left: .5rem;
+    animation: aparecerscroll-logo1 both;
+    animation-timeline: view();
+    animation-range: entry 80% cover 100%;
+}
+
 
 
 /* ----- FOOTER SECTION ----- */
@@ -446,4 +545,128 @@ footer {
     padding: .8rem;
     margin-top: auto;
     background-color:#a8d5ba;
+}
+
+.footer__paragraph {
+    font-size: .8rem;
+    text-align: justify;
+}
+
+
+
+/* ----- MEDIA QUERIES ----- */
+
+@media screen and (min-width: 850px) {
+    .about__section__paragraph__container {
+        max-width: 50%;
+    }
+
+    .contact__section__container {
+        max-width: 60%;
+    }
+
+    .time__section__container {
+        max-width: 70%;
+    }
+
+    .social-media__a {
+        margin-left: 30%;
+        text-align: center;
+    }
+
+    .social-media__container :nth-child(2) :nth-child(2) {
+        margin-left: 32.9%;
+    }
+
+    .social-media__container :nth-child(3) :nth-child(2) {
+        margin-left: 32.2%;
+    }
+
+    .home__title, .home__title2 {
+        font-size: 6rem;
+    }
+
+    .home__paragraph, .home__paragraph2 {
+        font-size: 2rem;
+    }
+
+    .header__gradient {
+        height: 85dvh;
+    }
+
+    .header__logo {
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .farmacia-logo {
+        right: 20%;
+    }
+
+    .fl2 {
+        left: 20%;
+    }
+
+    .trato-imagen {
+        right: 10%;
+    }
+
+    .ti2 {
+        left: 10%;
+    }
+
+    .clock-image {
+        right: 10%;
+    }
+
+    .ci2 {
+        left: 10%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .farmacia-logo {
+        right: 25%;
+        width: 12rem;
+        top: -1rem;
+    }
+
+    .fl2 {
+        left: 25%;
+    }
+
+    .trato-imagen {
+        right: 25%;
+        width: 12rem;
+        top: -2rem;
+    }
+
+    .ti2 {
+        left: 25%;
+    }
+
+    .clock-image {
+        right: 20%;
+        width: 12rem;
+        top: -2rem;
+    }
+
+    .ci2 {
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .home__title, .home__title2 {
+        font-size: 3.1rem;
+    }
+
+    .home__paragraph, .home__paragraph2 {
+        font-size: 1.2rem;
+    }
+
+    .contact__info {
+        font-size: 1.1rem;
+    }
 }
